@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        style="@style/AppBarLayoutStyle"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="@string/fragment_create_barcode_title"
+            style="@style/ToolbarStyle"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        style="@style/ScrollStyle"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/default_margin_small"
+            android:orientation="vertical"
+            >
+
+
+
+            <!--QR code-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin_medium2"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:text="@string/fragment_create_barcode_qr_code"
+                style="@style/CreateBarcodeGroupTitleTextViewStyle"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:weightSum="4"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/qr_code_container"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/type"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Text"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llUpi"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/upi"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upi"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llUrl"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/url"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="URL"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llYoutube"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/youtube"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Youtube"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:weightSum="4"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/llWhatsapp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/whatsapp"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whatsapp"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llPinterest"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/pinterest"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pinterest"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llFacebook"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/facebook"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Facebook"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llTwitter"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/twitter"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Twitter"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:weightSum="4"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/llEmail"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/email"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llSms"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/sms"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sms"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llContact"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/contact"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llMobile"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/smartphone"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:weightSum="4"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/llPlayStore"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/playstore"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Play Store"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llInstagram"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/instagram"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Instagram"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/type"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Text"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/type"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Text"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+                android:id="@+id/button_clipboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_copy"
+                app:iconBackground="@color/green"
+                app:text="@string/fragment_create_barcode_qr_code_clipboard"
+                />
+
+
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+                android:id="@+id/button_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_text"
+                app:iconBackground="@color/blue3"
+                app:text="@string/fragment_create_barcode_qr_code_text"
+                />
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+
+                android:id="@+id/button_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_link"
+                app:iconBackground="@color/blue3"
+                app:text="@string/barcode_schema_url"
+                />
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+
+                android:id="@+id/button_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_wifi"
+                app:iconBackground="@color/blue3"
+                app:text="@string/barcode_schema_wifi"
+                />
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+
+                android:id="@+id/button_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_location"
+                app:iconBackground="@color/blue3"
+                app:text="@string/barcode_schema_geo"
+                />
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+
+                android:id="@+id/button_contact_vcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_contact"
+                app:iconBackground="@color/blue3"
+                app:text="@string/barcode_schema_v_card"
+                />
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+
+                android:visibility="gone"
+                android:id="@+id/button_show_all_qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_qr_code"
+                app:iconBackground="@color/blue"
+                app:text="@string/fragment_create_barcode_qr_code_show_all"
+                app:isDelimiterVisible="false"
+                app:isArrowVisible="true"
+                />
+
+            <!--Barcode-->
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_big"
+                android:layout_marginBottom="@dimen/default_margin_medium2"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:text="@string/fragment_create_barcode"
+                style="@style/CreateBarcodeGroupTitleTextViewStyle"
+                />
+            <com.vibame.barcodescanner.feature.common.view.IconButtonWithDelimiter
+                android:visibility="gone"
+                android:id="@+id/button_create_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_barcode"
+                app:iconBackground="@color/blue"
+                app:text="Barcodes Create"
+                app:isDelimiterVisible="false"
+                app:isArrowVisible="true"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
